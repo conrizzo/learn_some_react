@@ -22,8 +22,9 @@ export default function Home() {
           At the moment this is built off the standard Next.js template. The current objective
           is to read documentation, some tutorials, and attach stuff together to  make a new basic website here.
           <br />
+          <br />
           <code className={styles.code}>
-            <br />
+           
             const makeStuff = true;<br />
             let build = Boolean(makeStuff);<br />
             const drink = &apos;coffee&apos;;<br />
