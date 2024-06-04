@@ -5,17 +5,19 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+
 }
 
 .description {
   display: inherit;
-  justify-content: inherit;
+  justify-content: center;
   align-items: inherit;
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+  margin-top: 1rem;
 }
 
 .description a {
@@ -29,8 +31,8 @@
   position: relative;
   margin: 0;
   padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  background-color: rgba(var(--top-text-rgb), 0.5);
+  border: 1px solid rgba(var(--border-rgb), .8);
   border-radius: var(--border-radius);
 }
 
@@ -41,13 +43,14 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+  grid-template-columns: repeat(2, minmax(50%, auto));
   max-width: 100%;
   width: var(--max-width);
 }
 
 .card {
   padding: 1rem 1.2rem;
+ 
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
@@ -182,7 +185,7 @@
     background: linear-gradient(
       to bottom,
       rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
+      rgba(var(--top-text-rgb), 0.5)
     );
     background-clip: padding-box;
     backdrop-filter: blur(24px);
