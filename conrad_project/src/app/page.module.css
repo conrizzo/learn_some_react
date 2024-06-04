@@ -1,9 +1,17 @@
+.title{
+  padding: 0rem;  
+}
+
+.zIndex{
+
+}
+
 .main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 2rem;
   min-height: 100vh;
 
 }
@@ -49,12 +57,14 @@
 }
 
 .card {
-  padding: 1rem 1.2rem;
- 
+  padding: 1rem 1.2rem; 
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card span {
@@ -65,6 +75,7 @@
 .card h2 {
   font-weight: 600;
   margin-bottom: 0.7rem;
+  text-align: center;
 }
 
 .card p {
@@ -72,8 +83,13 @@
   opacity: 0.6;
   font-size: 0.9rem;
   line-height: 1.5;
-  max-width: 30ch;
+  
   text-wrap: balance;
+ 
+  justify-content: center;
+  margin-top: 1rem;
+  text-align: center;
+
 }
 
 .center {
@@ -171,13 +187,14 @@
   .description div {
     display: flex;
     justify-content: center;
-    position: fixed;
+   
+    
     width: 100%;
   }
 
   .description p {
-    align-items: center;
-    inset: 0 0 auto;
+   
+    justify-content: center;
     padding: 2rem 1rem 1.4rem;
     border-radius: 0;
     border: none;
@@ -192,9 +209,9 @@
   }
 
   .description div {
-    align-items: flex-end;
+    
     pointer-events: none;
-    inset: auto 0 0;
+    justify-content: center;
     padding: 2rem;
     height: 200px;
     background: linear-gradient(

@@ -14,8 +14,9 @@ export default function Home() {
   return (
 
     <main className={styles.main}>
-      <h1>This page is made in React / Next.js</h1>
+      <h1 className={styles.title}>This page is made in React / Next.js</h1>
       <div className={styles.description}>
+        
         <p>
           This is a new project to learn/develop with React/Next.js<br />
           At the moment this is built off the standard Next.js template. The current objective
@@ -29,12 +30,10 @@ export default function Home() {
             console.log(drink, &quot;=&quot;, build);<br />
           </code>
         </p>
-        <div>
-
-        </div>
+       
       </div>
 
-      <div className={styles.center}>
+      <div className={`${styles.center} ${styles.zIndex}`}>
         <FirstComponent />
       </div>
 
@@ -46,7 +45,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2>
-            Conrad&quot;s Website<span>-&gt;</span>
+            Conrad&apos;s Website<span>-&gt;</span>
           </h2>
           <p>My main website</p>
         </a>
@@ -57,7 +56,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2>
-            Conrad&quot;s Projects<span>-&gt;</span>
+            Conrad&apos;s Projects<span>-&gt;</span>
           </h2>
           <p>My main website</p>
         </a>
