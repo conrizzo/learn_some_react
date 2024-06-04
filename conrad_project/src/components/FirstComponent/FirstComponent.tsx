@@ -10,7 +10,7 @@ export default function Profile() {
                   src="/images/diffBird.jpg"
                 alt="Bird in the sky"
             />
-            <figcaption className={styles.centerWithFlex}>Just a picture</figcaption>
+            <figcaption className={styles.centerWithFlex}>Just a picture I created</figcaption>
         </div>
     )
 }

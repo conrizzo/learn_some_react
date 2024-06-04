@@ -17,8 +17,9 @@ export default function Home() {
       <h1>This page is made in React / Next.js</h1>
       <div className={styles.description}>
         <p>
-          This is a new React Next.js project to learn/develop with React/Next.js<br />
-          At the moment this is built off the standard Next.js template.<br />
+          This is a new project to learn/develop with React/Next.js<br />
+          At the moment this is built off the standard Next.js template. The current objective 
+          is to read documentation, some tutorials, and attach stuff together to  make a new basic website here.
           <br />
           <code className={styles.code}>
             <br />
