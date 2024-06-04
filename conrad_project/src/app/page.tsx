@@ -18,15 +18,15 @@ export default function Home() {
       <div className={styles.description}>
         <p>
           This is a new project to learn/develop with React/Next.js<br />
-          At the moment this is built off the standard Next.js template. The current objective 
+          At the moment this is built off the standard Next.js template. The current objective
           is to read documentation, some tutorials, and attach stuff together to  make a new basic website here.
           <br />
           <code className={styles.code}>
             <br />
             const makeStuff = true;<br />
             let build = Boolean(makeStuff);<br />
-            const drink = 'coffee';<br />
-            console.log(drink, "=", build);<br />
+            const drink = &apos;coffee&apos;;<br />
+            console.log(drink, &quot;=&quot;, build);<br />
           </code>
         </p>
         <div>
@@ -46,7 +46,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2>
-            Conrad's Website<span>-&gt;</span>
+            Conrad&quot;s Website<span>-&gt;</span>
           </h2>
           <p>My main website</p>
         </a>
@@ -57,7 +57,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2>
-            Conrad's Projects<span>-&gt;</span>
+            Conrad&quot;s Projects<span>-&gt;</span>
           </h2>
           <p>My main website</p>
         </a>

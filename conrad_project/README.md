@@ -1,3 +1,9 @@
+## About
+
+Have been learning with this, this is a project in Next.js and React. Using this to learn and perhaps make a quick project to
+go over fundamentals so I can use React comfortably.
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
