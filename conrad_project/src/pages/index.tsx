@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./index.module.css";
 
 
 
@@ -18,9 +18,9 @@ export default function Home() {
       <div className={styles.description}>
         
         <p>
-          This is a new project to learn/develop with React/Next.js<br />
+          Using this as a place to learn/develop with React/Next.js<br />
           At the moment this is built off the standard Next.js template. The current objective
-          is to read documentation, some tutorials, and attach stuff together to  make a new basic website here.
+          is to read documentation, pick up information from some tutorials, and build own application here in React.
           <br />
           <br />
           <code className={styles.code}>
@@ -59,7 +59,7 @@ export default function Home() {
           <h2>
             Conrad&apos;s Projects<span>-&gt;</span>
           </h2>
-          <p>My main website</p>
+          <p>Some Projects I made</p>
         </a>
 
 

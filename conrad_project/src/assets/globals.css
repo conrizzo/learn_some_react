@@ -1,14 +1,12 @@
 :root {
   --default-background-color: #ffffff;
 
-  --max-width: 1100px;
+  --max-width: 80rem;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --font-mono: Helvetica, Arial, sans-serif,  "Ubuntu Monospace";
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 166, 215, 238;
   --background-end-rgb: 255, 255, 255;
 
   --primary-glow: conic-gradient(from 180deg at 50% 50%,
@@ -36,6 +34,33 @@
   --card-border-rgb: 131, 134, 135;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -64,12 +89,8 @@
     --card-border-rgb: 200, 200, 200;
   }
 }
+*/
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
 html,
 body {

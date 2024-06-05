@@ -20,7 +20,7 @@
   display: inherit;
   justify-content: center;
   align-items: inherit;
-  font-size: 0.85rem;
+  font-size: 1rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
@@ -127,6 +127,26 @@
 .logo {
   position: relative;
 }
+
+.description p {
+  position: relative;
+  margin: 0;  
+  justify-content: center;
+  padding: 2rem 1rem 1rem;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
+  background: linear-gradient(
+    to bottom, 
+    
+    rgba(var(--background-start-rgb), 1),
+    rgba(var(--background-end-rgb), 0.5)
+    
+  );
+  background-clip: padding-box;
+  backdrop-filter: blur(24px);
+  border-radius: 1rem;
+}
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -191,21 +211,7 @@
   width: 100%;
 }
 
-  .description p {
-   
-    justify-content: center;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--top-text-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
-  }
+ 
 
   .description div {
     
