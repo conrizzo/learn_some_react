@@ -1,23 +1,15 @@
 :root {
-  --default-background-color: #ffffff;
+  --default-background-color: linear-gradient(to bottom, rgb(167, 215, 238), rgb(167, 215, 238));
 
   --max-width: 80rem;
-  --border-radius: 12px;
+  --border-radius: 1rem;
   --font-mono: Helvetica, Arial, sans-serif,  "Ubuntu Monospace";
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 166, 215, 238;
+  --background-start-rgb: 94, 177, 247;
   --background-end-rgb: 255, 255, 255;
 
-  --primary-glow: conic-gradient(from 180deg at 50% 50%,
-      #16abff33 0deg,
-      #0885ff33 55deg,
-      #54d6ff33 120deg,
-      #0071ff33 160deg,
-      transparent 360deg);
-  --secondary-glow: radial-gradient(rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0));
-
+ 
   --tile-start-rgb: 239, 245, 249;
   --tile-end-rgb: 228, 232, 233;
   --tile-border: conic-gradient(#00000080,
@@ -28,10 +20,10 @@
       #00000010,
       #00000080);
 
-  --top-text-rgb: 166, 215, 238;
+  --top-text-rgb: 94, 177, 247;
   --border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+  --card-rgb: 255,255,255;
+  --card-border-rgb: 80, 80, 80;
 }
 
 html {
@@ -105,7 +97,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: left;
-  background: linear-gradient(var(--default-background-color)) no-repeat;
+  background: linear-gradient(to bottom, rgb(167, 215, 238) 40%, rgb(255, 255, 255) 60%);
   word-wrap: break-word;
   overflow-wrap: break-word;
   color: rgb(var(--gray-dark));
