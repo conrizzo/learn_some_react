@@ -1,0 +1,12 @@
+
+.photosContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the images vertically */
+    gap: 20px; /* Add space between images */
+  }
+  
+  .photo {
+    max-width: 100%; /* Make images responsive */
+    height: auto;
+  }

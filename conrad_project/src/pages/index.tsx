@@ -10,7 +10,7 @@ export default function Home() {
     <main className={styles.main}>
       <h1 className={styles.title}>This page is made in React / Next.js</h1>
       <div className={styles.description}>
-
+    
         <p>
           Using this as a place to learn/develop with React/Next.js.
           At the moment this is built off the standard Next.js template but it is turning into its own unique project. The current objective
@@ -24,7 +24,13 @@ export default function Home() {
             const drink = &apos;coffee&apos;;<br />
             console.log(drink, &quot;=&quot;, build);<br />
           </code>
+          <a href="https://github.com/conrizzo/learn_some_react/tree/main/conrad_project" target="_blank" rel="noopener noreferrer">
+          Github</a>
         </p>
+       
+       
+      
+        
 
       </div>
       <div className={styles.grid}>
