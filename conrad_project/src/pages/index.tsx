@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./index.module.css";
+import Link from 'next/link';
 
 import FirstComponent, { PanelComponent } from "../components/FirstComponent/FirstComponent";
 
@@ -10,7 +11,7 @@ export default function Home() {
     <main className={styles.main}>
       <h1 className={styles.title}>This page is made in React / Next.js</h1>
       <div className={styles.description}>
-    
+
         <p>
           Using this as a place to learn/develop with React/Next.js.
           At the moment this is built off the standard Next.js template but it is turning into its own unique project. The current objective
@@ -24,16 +25,17 @@ export default function Home() {
             const drink = &apos;coffee&apos;;<br />
             console.log(drink, &quot;=&quot;, build);<br />
           </code>
-          <a href="https://github.com/conrizzo/learn_some_react/tree/main/conrad_project" target="_blank" rel="noopener noreferrer">
-          Github</a>
+          <a className={styles.githubLink} href="https://github.com/conrizzo/learn_some_react/tree/main/conrad_project" target="_blank" rel="noopener noreferrer">
+            Github</a>
         </p>
-       
-       
-      
-        
+
+
+
+
 
       </div>
       <div className={styles.grid}>
+
         <a
           href="https://conradswebsite.com/"
           className={styles.card}
@@ -43,8 +45,9 @@ export default function Home() {
           <h2>
             Conrad&apos;s Website<span></span>
           </h2>
-          <p>My website</p>
+          <p>My main website</p>
         </a>
+
         <a
           href="https://conradswebsite.com/my-projects/"
           className={styles.card}
@@ -57,6 +60,17 @@ export default function Home() {
           <p>Projects I made</p>
         </a>
 
+        <Link href="/photos"
+          className={styles.card}
+        >
+          <h2>
+            <span>
+              Go to Photos Page
+            </span>
+          </h2>
+          <p>Pictures of Germany</p>
+        </Link>
+
 
 
       </div>
@@ -64,13 +78,13 @@ export default function Home() {
         <FirstComponent />
       </div>
       <div className={`${styles.center} ${styles["index-image-adjustments"]}`}>
-      <PanelComponent>
-          <h2>New section here...</h2>
+        <PanelComponent>
+          <h2>...</h2>
         </PanelComponent>
       </div>
-      
 
-      
+
+
     </main>
   );
 }

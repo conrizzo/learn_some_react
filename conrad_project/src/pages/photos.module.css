@@ -10,3 +10,10 @@
     max-width: 100%; /* Make images responsive */
     height: auto;
   }
+
+
+
+  .localFigure {
+    background: #000;
+    color: #fff;
+  }

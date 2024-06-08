@@ -11,6 +11,7 @@ export async function getStaticProps() {
     const imagePaths = filenames.map(filename => `/images/Germany/${filename}`);
 
     return {
+
         props: {
             imagePaths,
         },
@@ -22,10 +23,18 @@ interface PhotosProps {
 }
 const Photos: React.FC<PhotosProps> = ({ imagePaths }) => {
     return (
-        <div className={styles.photosContainer}>
-            {imagePaths.map((path, index) => (
-                <img key={index} src={path} alt={`Photo ${index + 1}`} className={styles.photo} />
-            ))}
+        <div>
+            <h1>Germany Photos by Conrad © 2024</h1>
+            <div className={styles.photosContainer}>
+                {imagePaths.map((path, index) => (
+                    <a key={index} href={path} target="_blank" rel="noopener noreferrer">
+                        <figure className={`${styles.photoFigure} ${styles.localFigure}`}>
+                            <img src={path} alt={`Photo ${index + 1}`} className={styles.photo} />
+                            {index < 5 && <span>June 7, 2024</span>}
+                        </figure>
+                    </a>
+                ))}
+            </div>
         </div>
     );
 };

@@ -129,6 +129,11 @@
   backdrop-filter: blur(24px);
   border-radius: .5rem;
 }
+
+.githubLink {
+  width: fit-content;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -138,10 +143,11 @@
 
   .card {
     transition: color 0.25s ease-in-out;
-    transition: background 0.5s ease-in-out;
+    transition: background 0.1s ease-in-out;
   }
   .card:hover {
     color: rgb(26, 115, 232);
+   
   }
 
   
