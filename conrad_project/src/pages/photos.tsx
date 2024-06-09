@@ -29,7 +29,7 @@ const Photos: React.FC<PhotosProps> = ({ imagePaths }) => {
                 {imagePaths.map((path, index) => (
                     <a key={index} href={path} target="_blank" rel="noopener noreferrer">
                         <figure className={`${styles.photoFigure} ${styles.localFigure}`}>
-                            <img src={path} alt={`Photo ${index + 1}`} className={styles.photo} />
+                            <img src={path} alt={`Photo ${index + 1}`} className={styles.photo} loading="lazy" />
                             {index < 5 && <span>June 7, 2024</span>}
                         </figure>
                     </a>
