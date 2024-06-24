@@ -163,11 +163,11 @@ const AgreeToTerms: React.FC = () => {
                             />
                             <br></br>
                             <br></br>
-                            {'You agreed ' + index + ' times'}
+                            {'You agreed only ' + index + ' times'}
                         </div>
                         <div>
                             <button className={`clean-button ${styles['button-margin']}`} onClick={() => closeModal(index, true)}>
-                                Close
+                                Disagree
                             </button>
                             <button className="clean-button" onClick={() => { closeModal(index); addModal(index); }}>Confirm</button>
                         </div>
