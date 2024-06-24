@@ -71,6 +71,17 @@ export default function Home() {
           <p>Pictures of Germany</p>
         </Link>
 
+        <Link href="/agree-to-terms"
+          className={styles.card}
+        >
+          <h2>
+            <span>
+              Do you agree to these terms?
+            </span>
+          </h2>
+          <p>Agree to terms</p>
+        </Link>
+
 
 
       </div>
