@@ -63,29 +63,37 @@ type ModalType = {
     index: number;
 };
 
-function pickAndRemoveRandomElement(arr: string[]): string | undefined {
+function removeAndReturnItem(): string | undefined {
 
-    if (arr.length === 0) {
-        return undefined;
-    }
+    if (synonyms.length === 0) return undefined;
 
-    const randomIndex = Math.floor(Math.random() * arr.length);
-    const [pickedElement] = arr.splice(randomIndex, 1);
-    return pickedElement;
+    const randomIndex = Math.floor(Math.random() * synonyms.length);
+    console.log(synonyms.length);
+    return synonyms.splice(randomIndex, 1)[0];
 }
 
-let setIndex = 0;
+const theArray: string[] = [];
 
 
 const AgreeToTerms: React.FC = () => {
-    const getSynonym = pickAndRemoveRandomElement(synonyms)
+    const getSynonym = () => removeAndReturnItem();
 
+    // the -1 represents a default starting state, the 'false' in the next 2 lines also represent this
     const [modals, setModals] = useState<ModalType[]>([{ isOpen: false, index: -1 }]);
     const [checkboxStates, setCheckboxStates] = useState<boolean[]>([false]);
 
-    const generateDynamicText = (index: number) => Array(index).fill(
-        getSynonym
-    ).join(', ');
+
+    const generateDynamicText = (index: number) => {
+        if (index <= 0) {
+            return [];
+        }
+        const synonym = getSynonym();
+        const newValue = synonym ? synonym : 'absolutely';
+        theArray.push(newValue);
+        return theArray;
+    };
+
+
 
     const handleCheckboxChange = (index: number) => {
         const updatedStates = [...checkboxStates];
@@ -114,11 +122,13 @@ const AgreeToTerms: React.FC = () => {
         if (checkboxStates[index] === false && closeOverride === false) {
             return;
         }
-    
+
         if (closeOverride) {
             // Reset to initial state if "Disagree" is selected
             setModals([{ isOpen: false, index: -1 }]);
             setCheckboxStates([false]);
+            theArray.length = 0;
+
         } else {
             // Close the modal normally
             const updatedModals = modals.map((modal) => {
@@ -131,11 +141,11 @@ const AgreeToTerms: React.FC = () => {
         }
     };
 
-    const [dynamicText, setDynamicText] = useState('');
-    const index = modals.length - 1; // Define the 'index' variable
+    const [dynamicText, setDynamicText] = useState<string>('');
+    const index = modals.length - 1;
     useEffect(() => {
         // This code runs when the component mounts and whenever `index` changes
-        setDynamicText(generateDynamicText(index));
+        setDynamicText(generateDynamicText(index).join(', ') || '');
     }, [index]); // Dependency array, `generateDynamicText` is called when `index` changes
 
 
@@ -160,7 +170,7 @@ const AgreeToTerms: React.FC = () => {
                 </div>
             </div>
             {modals.map((modal, index) => (
-               
+
                 <Modal key={index} isOpen={modal.isOpen} onClose={() => closeModal(modal.index)}>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <div className={styles['check-box']}>
