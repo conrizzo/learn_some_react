@@ -74,6 +74,8 @@ function pickAndRemoveRandomElement(arr: string[]): string | undefined {
     return pickedElement;
 }
 
+let setIndex = 0;
+
 
 const AgreeToTerms: React.FC = () => {
     const getSynonym = pickAndRemoveRandomElement(synonyms)
@@ -109,18 +111,24 @@ const AgreeToTerms: React.FC = () => {
     };
 
     const closeModal = (index: number, closeOverride: boolean = false) => {
-
         if (checkboxStates[index] === false && closeOverride === false) {
             return;
         }
-
-        const updatedModals = modals.map((modal) => {
-            if (modal.index === index) {
-                return { ...modal, isOpen: false };
-            }
-            return modal;
-        });
-        setModals(updatedModals);
+    
+        if (closeOverride) {
+            // Reset to initial state if "Disagree" is selected
+            setModals([{ isOpen: false, index: -1 }]);
+            setCheckboxStates([false]);
+        } else {
+            // Close the modal normally
+            const updatedModals = modals.map((modal) => {
+                if (modal.index === index) {
+                    return { ...modal, isOpen: false };
+                }
+                return modal;
+            });
+            setModals(updatedModals);
+        }
     };
 
     const [dynamicText, setDynamicText] = useState('');
@@ -152,6 +160,7 @@ const AgreeToTerms: React.FC = () => {
                 </div>
             </div>
             {modals.map((modal, index) => (
+               
                 <Modal key={index} isOpen={modal.isOpen} onClose={() => closeModal(modal.index)}>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <div className={styles['check-box']}>
