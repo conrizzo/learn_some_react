@@ -1,6 +1,6 @@
 // TermsCheckbox.tsx
 import React from 'react';
-
+import styles from './checkbox.module.css';
 
 
 interface CheckboxProps {
@@ -13,14 +13,16 @@ interface CheckboxProps {
 
 const Checkbox = (
     { isChecked, onChange, labelText = 'I agree to the terms and conditions' }: CheckboxProps) => (
-    <label>
-        <input
-            type="checkbox"
-            checked={isChecked}
-            onChange={onChange}
-        />
-        {labelText} {/* labelText will use the default if not provided */}
-    </label>
+   
+        <label>
+            <input
+                type="checkbox"
+                checked={isChecked}
+                onChange={onChange}
+            />
+            <span className={`${styles['label-text']}`}>{labelText}</span> {/* labelText will use the default if not provided */}
+        </label>
+  
 );
 
 export default Checkbox;

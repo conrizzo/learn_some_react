@@ -16,11 +16,12 @@
     align-items: center;
 }
 
+
 .check-box input {
     cursor: pointer;
     margin-left: 0.25rem;
-    margin-right: 0.5rem;
-    transform: scale(1.5);
+    margin-right: .5rem;      
+    transform: scale(1.5);    
 }
 
 .check-box input[type='checkbox'] {

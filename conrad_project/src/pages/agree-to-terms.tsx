@@ -165,7 +165,7 @@ const AgreeToTerms: React.FC = () => {
                                 onChange={() => handleCheckboxChange(0)}
                             />
                         </div>
-                        <button className="clean-button" onClick={() => addModal(0)}>Confirm</button>
+                        <button className={`clean-button ${styles['button-margin']}`} onClick={() => addModal(0)}>Confirm</button>
                     </div>
                 </div>
             </div>
@@ -173,16 +173,15 @@ const AgreeToTerms: React.FC = () => {
 
                 <Modal key={index} isOpen={modal.isOpen} onClose={() => closeModal(modal.index)}>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <div className={styles['check-box']}>
+                        <div className={`${styles['check-box']}`}>
                             <TermsCheckbox
                                 labelText={`Are you ${dynamicText} sure you agree to the terms and conditions?`}
-
                                 isChecked={checkboxStates[index]}
                                 onChange={() => handleCheckboxChange(index)}
                             />
                             <br></br>
-                            <br></br>
-                            {'You agreed only ' + index + ' times'}
+
+
                         </div>
                         <div>
                             <button className={`clean-button ${styles['button-margin']}`} onClick={() => closeModal(index, true)}>
@@ -190,6 +189,7 @@ const AgreeToTerms: React.FC = () => {
                             </button>
                             <button className="clean-button" onClick={() => { closeModal(index); addModal(index); }}>Confirm</button>
                         </div>
+                        {'You agreed only ' + index + ' times'}
                     </div>
                 </Modal>
             ))}
