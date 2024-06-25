@@ -3,6 +3,7 @@ import Modal from '../components/Modals/ConfirmationModal';
 import styles from './are-you-bored.module.css';
 import theImage from '/images/bored/lord_of_rings.jpg';
 // <img src={'/images/bored/lord_of_rings.jpg'} alt="Lord of the Rings" />
+
 type ModalType = {
     isOpen: boolean;
     index: number;
@@ -27,7 +28,7 @@ const AgreeToTerms: React.FC = () => {
                 next: {
                     question: "Are you doing something important?",
                     choices: [
-                        { answer: "Yes", next: "No you are'nt ..." },
+                        { answer: "Yes", next: "No you aren't ..." },
                         { answer: "No", next: "Lord of the Rings" }
                     ]
                 }
@@ -54,7 +55,6 @@ const AgreeToTerms: React.FC = () => {
     };
 
     const addModal = (text?: string) => {
-
         const newIndex = modals.length;
         setModals([...modals, { isOpen: true, index: newIndex, text }]); // Include the text in the new modal object
         console.log(modals);
@@ -79,12 +79,10 @@ const AgreeToTerms: React.FC = () => {
     return (
         <div>
             <div className={styles.centering} style={{ height: '80vh' }}>
-
                 <div className={`${styles.centering} ${styles['agree-background']}`}>
                     <div className={styles['vertical-container']}>
                         <p style={{ textAlign: 'center' }}>Please press <b>Start</b> to begin your Adventure</p>
                         <button className={`clean-button ${styles['button-margin']}`} onClick={() => { addModal(); }}>Start</button>
-
                     </div>
                 </div>
             </div>
@@ -101,20 +99,15 @@ const AgreeToTerms: React.FC = () => {
 
                                                 {choice.answer}
 
-
                                             </button>
-
                                         ))
                                     ) : (
                                         <p>{JSON.stringify(currentNode)}</p>
-
                                     )}
                                 </div>
                             </div>
 
-
                             <p>{modal.text || ''}</p>
-
                             {/* showDelayedPart && <p>Lord of the Rings</p> */}
                             {showDelayedPart && <img src={'/images/bored/lord_of_rings.jpg'} alt="Lord of the Rings" />}
 
