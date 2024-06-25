@@ -1,0 +1,47 @@
+.title{
+    text-align: center;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.paragraphs-two {
+    padding-bottom: 2rem;
+}
+
+.centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-box input {
+    cursor: pointer;
+    margin-left: 0.25rem;
+    margin-right: 0.5rem;
+    transform: scale(1.5);
+}
+
+.check-box input[type='checkbox'] {
+    accent-color: #42b983;
+}
+
+.button-margin{
+    margin: .5rem;
+}
+
+.agree-background{
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 5rem;
+    width: fit-content;
+}
+
+
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+  }

@@ -82,6 +82,19 @@ export default function Home() {
           <p>Agree to terms</p>
         </Link>
 
+        
+        <Link href="/are-you-bored"
+          className={styles.card}
+        >
+          <h2>
+            <span>
+             Bored
+            </span>
+          </h2>
+          <p></p>
+        </Link>
+
+
 
 
       </div>
