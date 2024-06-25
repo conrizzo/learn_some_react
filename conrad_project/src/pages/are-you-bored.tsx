@@ -115,7 +115,7 @@ const AgreeToTerms: React.FC = () => {
 
                             <p>{modal.text || ''}</p>
 
-                            {showDelayedPart && <p>Lord of the Rings</p>}
+                            {/* showDelayedPart && <p>Lord of the Rings</p> */}
                             {showDelayedPart && <img src={'/images/bored/lord_of_rings.jpg'} alt="Lord of the Rings" />}
 
                         </div>
