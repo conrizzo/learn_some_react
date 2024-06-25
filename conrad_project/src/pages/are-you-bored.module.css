@@ -34,7 +34,7 @@
 .agree-background{
     background: #fff;
     padding: 2rem;
-    border-radius: 1rem;
+    border-radius: .75rem;
     margin-top: 5rem;
     width: fit-content;
 }

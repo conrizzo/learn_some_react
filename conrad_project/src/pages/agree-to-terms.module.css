@@ -29,6 +29,8 @@
 
 .button-margin{
     margin: .5rem;
+    margin-right: .25rem;
+    margin-left: .25rem;
 }
 
 .agree-background{

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import Modal from '../components/Modals/ConfirmationModal';
 import styles from './are-you-bored.module.css';
-
+import theImage from '/images/bored/lord_of_rings.jpg';
+// <img src={'/images/bored/lord_of_rings.jpg'} alt="Lord of the Rings" />
 type ModalType = {
     isOpen: boolean;
     index: number;
     text?: string;
+    image?: string; // Add the 'image' property to the type definition
 };
 
 const AgreeToTerms: React.FC = () => {
@@ -14,18 +16,19 @@ const AgreeToTerms: React.FC = () => {
         question: "Are you bored?",
         choices: [
             {
-                answer: "yes",
+                answer: "Yes",
                 next:
                     "Lord of the Rings"
                 ,
+                image: "",
             },
             {
-                answer: "no",
+                answer: "No",
                 next: {
                     question: "Are you doing something important?",
                     choices: [
-                        { answer: "yes", next: "No you are'nt!" },
-                        { answer: "no", next: "Lord of the Rings" }
+                        { answer: "Yes", next: "No you are'nt ..." },
+                        { answer: "No", next: "Lord of the Rings" }
                     ]
                 }
             }
@@ -39,7 +42,7 @@ const AgreeToTerms: React.FC = () => {
     const handleChoice = (choice: any) => {
         if (typeof choice.next === 'string') {
             // Assuming reaching a string means the end of the decision tree
-            if (choice.next.includes("No you")) {
+            if (choice.next.includes("No you") || choice.next.includes("Lord of the Rings")) {
                 setTimeout(() => {
                     setShowDelayedPart(true);
                 }, 1000); // Delay the second part for 1 second
@@ -51,8 +54,10 @@ const AgreeToTerms: React.FC = () => {
     };
 
     const addModal = (text?: string) => {
+
         const newIndex = modals.length;
         setModals([...modals, { isOpen: true, index: newIndex, text }]); // Include the text in the new modal object
+        console.log(modals);
     };
 
     const closeModal = (index: number, closeOverride: boolean = false) => {
@@ -73,11 +78,12 @@ const AgreeToTerms: React.FC = () => {
 
     return (
         <div>
-            <div className={styles.centering}>
+            <div className={styles.centering} style={{ height: '80vh' }}>
+
                 <div className={`${styles.centering} ${styles['agree-background']}`}>
                     <div className={styles['vertical-container']}>
-
-                        <button className="clean-button" onClick={() => { addModal(); }}>Start</button>
+                        <p style={{ textAlign: 'center' }}>Please press <b>Start</b> to begin your Adventure</p>
+                        <button className={`clean-button ${styles['button-margin']}`} onClick={() => { addModal(); }}>Start</button>
 
                     </div>
                 </div>
@@ -87,13 +93,14 @@ const AgreeToTerms: React.FC = () => {
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <div className={styles['check-box']}>
                             <div>
-                                <p >{currentNode.question || 'Question'}</p>
+                                <p className={styles.centering}>{currentNode.question || 'Question'}</p>
                                 <div className={styles.centering}>
                                     {currentNode.choices ? (
                                         currentNode.choices.map((choice, index) => (
                                             <button className={`clean-button ${styles['button-margin']}`} key={index} onClick={() => handleChoice(choice)}>
 
                                                 {choice.answer}
+
 
                                             </button>
 
@@ -104,8 +111,13 @@ const AgreeToTerms: React.FC = () => {
                                     )}
                                 </div>
                             </div>
-                            {showDelayedPart && <p>Lord of the Rings</p>}
+
+
                             <p>{modal.text || ''}</p>
+
+                            {showDelayedPart && <p>Lord of the Rings</p>}
+                            {showDelayedPart && <img src={'/images/bored/lord_of_rings.jpg'} alt="Lord of the Rings" />}
+
                         </div>
                         <div>
 
