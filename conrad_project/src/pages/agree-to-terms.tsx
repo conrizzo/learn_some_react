@@ -78,10 +78,10 @@ const theArray: string[] = [];
 
 const AgreeToTerms: React.FC = () => {
     const [showTerms, setShowTerms] = useState(false);
-    const [buttonText, setButtonText] = useState('Read Terms');
+    const [linkText, setLinkText] = useState('Read Terms');
     const handleOnClickShowTerms = () => {
         setShowTerms(!showTerms);
-        setButtonText(prevText => prevText === 'Read Terms' ? 'Hide Terms' : 'Read Terms');
+        setLinkText(prevText => prevText === 'Read Terms' ? 'Hide Terms' : 'Read Terms');
     };
 
 
@@ -169,19 +169,21 @@ const AgreeToTerms: React.FC = () => {
                             />
                         </div>
                         <button className={`clean-button ${styles['button-margin']}`} onClick={() => addModal(0)}>Confirm</button>
+                        <a className={`${styles.link} ${styles['link-with-margin']}`} onClick={handleOnClickShowTerms}>{linkText}</a>
                     </div>
                 </div>
             </div>
-            <div className={styles.centering}>
-                <div className={`${styles.centering} ${styles['agree-background']}`}>
-                    <div className={styles['vertical-container']}>
-                        <div className={styles['check-box']}>
-                            <button className={'clean-button'} onClick={handleOnClickShowTerms}>{buttonText}</button>
-                            {showTerms && <TermsContent />}
+            {showTerms && (
+                <div className={styles.centering}>
+                    <div className={`${styles.centering} ${styles['agree-background']}`}>
+                        <div className={styles['vertical-container']}>
+                            <div className={styles['check-box']}>
+                                <TermsContent />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            )}
 
             {modals.map((modal, index) => (
 
