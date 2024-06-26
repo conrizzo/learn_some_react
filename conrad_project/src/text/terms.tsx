@@ -33,7 +33,7 @@ const TermsContent = () => (
         <p style={paragraphStyle}>
             Section 2: <em>The Burger Ballad</em>
             <br></br>
-            2.1. We reserve the right to replace all burger toppings with sprinkles at any given moment. Don't worry, ketchup sprinkles are still delicious (probably).
+            2.1. We reserve the right to replace all burger toppings with sprinkles at any given moment. Don&apos;t worry, ketchup sprinkles are still delicious (probably).
             2.2. Users are strictly forbidden from attempting to build a functioning jetpack out of used soda cups and leftover french fries. The potential for sticky disasters is simply too high.
             2.3. Should you discover a hidden compartment in your burger containing a miniature world populated entirely by sentient onion rings, you agree to maintain diplomatic relations and negotiate a trade treaty for the exchange of ketchup packets.
             2.4. In the case of a malfunction that results in your milkshake inexplicably transforming into a sentient disco ball, you are responsible for orchestrating a dance party with a minimum of three enthusiastic napkins.
@@ -41,7 +41,7 @@ const TermsContent = () => (
 
         </p>
         <p style={paragraphStyle}>
-            (Please turn the page for a finger-lickin' good exploration of the proper etiquette for greeting a talking chicken nugget and the delicate art of negotiating with a particularly stubborn soft-serve ice cream machine.)
+            (Please turn the page for a finger-lickin&apos; good exploration of the proper etiquette for greeting a talking chicken nugget and the delicate art of negotiating with a particularly stubborn soft-serve ice cream machine.)
             (Sporks are furthermore, hencefourth the best utensil.)
             ... (Continued on Page 2 of 5) ...
         </p>
@@ -49,11 +49,11 @@ const TermsContent = () => (
         <p style={paragraphStyle}>
             Section 2: <em>The Burger Ballad (Continued)</em>
             <br></br>
-            2.6. In the highly unlikely event that a rogue singing chicken nugget attempts to serenade you with a soulful rendition of the "Chicken McNugget Song," you are obligated to provide a standing ovation and a heartfelt critique focusing on the proper execution of a high C (with extra dipping sauce, of course).
+            2.6. In the highly unlikely event that a rogue singing chicken nugget attempts to serenade you with a soulful rendition of the &quot;Chicken McNugget Song,&quot; you are obligated to provide a standing ovation and a heartfelt critique focusing on the proper execution of a high C (with extra dipping sauce, of course).
 
             2.7. Users are expressly forbidden from using our services to train french fries to perform synchronized swimming routines in the soda fountain. The potential for soggy chaos and beverage contamination is simply too high.
 
-            2.8. Should you discover a hidden message etched on the bottom of your soft drink cup, you agree to decipher it and, if it pertains to the secret recipe for the elusive "McRib," share 20% of the first bite with us (in the form of a slightly used spork, naturally).
+            2.8. Should you discover a hidden message etched on the bottom of your soft drink cup, you agree to decipher it and, if it pertains to the secret recipe for the elusive &quot;McRib,&quot; share 20% of the first bite with us (in the form of a slightly used spork, naturally).
 
             2.9. In the case of a malfunction that results in your order being replaced entirely with a mountain of mystery meat patties, you are responsible for negotiating a peaceful resolution with a well-timed impersonation of Colonel Sanders performing the Macarena.
 
