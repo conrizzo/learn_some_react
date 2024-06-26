@@ -4,6 +4,8 @@
 
 .center-text {
     text-align: center;
+    color: #252525;
+    margin-top: 1rem;
 }
 
 .paragraphs-two {
@@ -14,6 +16,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 

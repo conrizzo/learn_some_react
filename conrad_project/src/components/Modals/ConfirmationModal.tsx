@@ -37,7 +37,8 @@ const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
     if (!isOpen) return null;
 
     return (
-        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.5)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.5)', 
+        display: 'flex', justifyContent: 'center', alignItems: 'center', paddingLeft: '1rem', paddingRight: '1rem' }}>
             <div ref={modalRef} style={{ backgroundColor: 'white', padding: '20px', borderRadius: '.75rem' }}>
                 {children}
             </div>

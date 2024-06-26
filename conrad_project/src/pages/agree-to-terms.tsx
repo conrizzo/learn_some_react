@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Modal from '../components/Modals/ConfirmationModal';
 import TermsCheckbox from '../components/Forms/checkbox';
 import styles from './agree-to-terms.module.css';
+import TermsContent from '../text/terms';
 
 const synonyms = [
     "completely",
@@ -76,12 +77,19 @@ const theArray: string[] = [];
 
 
 const AgreeToTerms: React.FC = () => {
+    const [showTerms, setShowTerms] = useState(false);
+    const [buttonText, setButtonText] = useState('Read Terms');
+    const handleOnClickShowTerms = () => {
+        setShowTerms(!showTerms);
+        setButtonText(prevText => prevText === 'Read Terms' ? 'Hide Terms' : 'Read Terms');
+    };
+
+
     const getSynonym = () => removeAndReturnItem();
 
     // the -1 represents a default starting state, the 'false' in the next 2 lines also represent this
     const [modals, setModals] = useState<ModalType[]>([{ isOpen: false, index: -1 }]);
     const [checkboxStates, setCheckboxStates] = useState<boolean[]>([false]);
-
 
     const generateDynamicText = (index: number) => {
         if (index <= 0) {
@@ -94,7 +102,6 @@ const AgreeToTerms: React.FC = () => {
     };
 
 
-
     const handleCheckboxChange = (index: number) => {
         const updatedStates = [...checkboxStates];
         updatedStates[index] = !updatedStates[index];
@@ -103,15 +110,12 @@ const AgreeToTerms: React.FC = () => {
 
     const addModal = (index?: number) => {
 
-
         if (index === undefined) {
             return;
         }
-
         if (checkboxStates[index] === false) {
             return;
         }
-
 
         const newIndex = modals.length;
         setModals([...modals, { isOpen: true, index: newIndex }]);
@@ -148,17 +152,16 @@ const AgreeToTerms: React.FC = () => {
         setDynamicText(generateDynamicText(index).join(', ') || '');
     }, [index]); // Dependency array, `generateDynamicText` is called when `index` changes
 
-
     return (
         <div>
-
-
+            <div className={styles['center-text']}>
+                <h1>Agreeing to terms and conditions</h1>
+                <p>Made to simulate the internet with 100% accuracy</p>
+            </div>
             <div className={styles.centering}>
                 <div className={`${styles.centering} ${styles['agree-background']}`}>
-
                     <div className={styles['vertical-container']}>
                         <div className={styles['check-box']}>
-
                             <TermsCheckbox
                                 labelText={`Do you agree to the terms and conditions?`}
                                 isChecked={checkboxStates[0]}
@@ -169,6 +172,17 @@ const AgreeToTerms: React.FC = () => {
                     </div>
                 </div>
             </div>
+            <div className={styles.centering}>
+                <div className={`${styles.centering} ${styles['agree-background']}`}>
+                    <div className={styles['vertical-container']}>
+                        <div className={styles['check-box']}>
+                            <button className={'clean-button'} onClick={handleOnClickShowTerms}>{buttonText}</button>
+                            {showTerms && <TermsContent />}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {modals.map((modal, index) => (
 
                 <Modal key={index} isOpen={modal.isOpen} onClose={() => closeModal(modal.index)}>
