@@ -67,11 +67,13 @@ const synonyms = [
     "in all respects",
 ];
 
+let tempSynonyms = [...synonyms]; // shallow copy of the synonyms array
+
 function removeAndReturnItem(): string | undefined {
-    if (synonyms.length === 0) return undefined;
-    const randomIndex = Math.floor(Math.random() * synonyms.length);
-    console.log(synonyms.length);
-    return synonyms.splice(randomIndex, 1)[0];
+    if (tempSynonyms.length === 0) return undefined;
+    const randomIndex = Math.floor(Math.random() * tempSynonyms.length);
+    console.log(tempSynonyms.length);
+    return tempSynonyms.splice(randomIndex, 1)[0];
 }
 
 const AgreeToTerms: React.FC = () => {   
