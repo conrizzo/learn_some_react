@@ -4,59 +4,6 @@ import TermsCheckbox from '../components/Forms/checkbox';
 import styles from './agree-to-terms.module.css';
 import TermsContent from '../text/terms';
 
-const synonyms = [
-    "completely",
-    "entirely",
-    "fully",
-    "perfectly",
-    "thoroughly",
-    "wholly",
-    "utterly",
-    "quite", // informal
-    "certainly",
-    "definitely",
-    "of course", // agreement
-    "positively",
-    "surely",
-    "undoubtedly",
-    "unquestionably",
-    "without fail",
-    "totally",
-    "downright",
-    "flat-out", // informal
-    "radically",
-    "stone-cold", // informal
-    "hands down", // informal
-    "absolutely", // used for emphasis
-    "categorically",
-    "indisputably",
-    "indubitably",
-    "veritably", // archaic
-    "plain",
-    "cold", // slang
-    "realistically",
-    "frankly",
-    "truly",
-    "generally",
-    "admittedly",
-    "mostly",
-    "truthfully",
-    "substantially",
-    "largely",
-    "for sure",
-    "you bet",
-    "no doubt",
-    "definitely", // informal
-    "totally", // informal
-    "completely", // informal
-    "for real", // informal
-    "exactly",
-    "indeed",
-    "all together",
-    "assuredly",
-    "in its entirety"
-];
-
 
 // Define a type for the modal object
 type ModalType = {
@@ -64,19 +11,68 @@ type ModalType = {
     index: number;
 };
 
-function removeAndReturnItem(): string | undefined {
-
-    if (synonyms.length === 0) return undefined;
-
-    const randomIndex = Math.floor(Math.random() * synonyms.length);
-    console.log(synonyms.length);
-    return synonyms.splice(randomIndex, 1)[0];
-}
-
-const theArray: string[] = [];
-
-
 const AgreeToTerms: React.FC = () => {
+    const theArray: string[] = [];
+    const synonyms = [
+        "completely",
+        "entirely",
+        "fully",
+        "perfectly",
+        "thoroughly",
+        "wholly",
+        "utterly",
+        "quite", // informal
+        "certainly",
+        "definitely",
+        "of course", // agreement
+        "positively",
+        "surely",
+        "undoubtedly",
+        "unquestionably",
+        "without fail",
+        "totally",
+        "downright",
+        "flat-out", // informal
+        "radically",
+        "stone-cold", // informal
+        "hands down", // informal
+        "absolutely", // used for emphasis
+        "categorically",
+        "indisputably",
+        "indubitably",
+        "veritably", // archaic
+        "plain",
+        "realistically",
+        "frankly",
+        "truly",
+        "generally",
+        "admittedly",
+        "mostly",
+        "truthfully",
+        "substantially",
+        "largely",
+        "for sure",
+        "you bet",
+        "no doubt",
+        "definitely", // informal
+        "totally", // informal
+        "completely", // informal
+        "for real", // informal
+        "exactly",
+        "indeed",
+        "all together",
+        "assuredly",
+        "in its entirety",
+        "in all respects",
+    ];
+
+    function removeAndReturnItem(): string | undefined {
+        if (synonyms.length === 0) return undefined;
+        const randomIndex = Math.floor(Math.random() * synonyms.length);
+        console.log(synonyms.length);
+        return synonyms.splice(randomIndex, 1)[0];
+    }
+
     const [showTerms, setShowTerms] = useState(false);
     const [linkText, setLinkText] = useState('Read Terms');
     const handleOnClickShowTerms = () => {
@@ -96,7 +92,7 @@ const AgreeToTerms: React.FC = () => {
             return [];
         }
         const synonym = getSynonym();
-        const newValue = synonym ? synonym : 'absolutely';
+        const newValue = synonym ? synonym : 'incredible you agreed more than 50 times!';
         theArray.push(newValue);
         return theArray;
     };
@@ -109,7 +105,6 @@ const AgreeToTerms: React.FC = () => {
     };
 
     const addModal = (index?: number) => {
-
         if (index === undefined) {
             return;
         }
@@ -132,7 +127,6 @@ const AgreeToTerms: React.FC = () => {
             setModals([{ isOpen: false, index: -1 }]);
             setCheckboxStates([false]);
             theArray.length = 0;
-
         } else {
             // Close the modal normally
             const updatedModals = modals.map((modal) => {
@@ -196,8 +190,6 @@ const AgreeToTerms: React.FC = () => {
                                 onChange={() => handleCheckboxChange(index)}
                             />
                             <br></br>
-
-
                         </div>
                         <div>
                             <button className={`clean-button ${styles['button-margin']}`} onClick={() => closeModal(index, true)}>
@@ -205,7 +197,7 @@ const AgreeToTerms: React.FC = () => {
                             </button>
                             <button className="clean-button" onClick={() => { closeModal(index); addModal(index); }}>Confirm</button>
                         </div>
-                        {'You agreed only ' + index + ' times'}
+                        <span>You agreed <i>only</i> {index} times</span>
                     </div>
                 </Modal>
             ))}
