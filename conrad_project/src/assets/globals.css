@@ -109,6 +109,12 @@ a {
   text-decoration: none;
 }
 
+.link{
+  color: rgb(66, 133, 244);    
+}
+.link:hover{
+  cursor: pointer;
+}
 
 /* CSS  apparently this is based on GitHub buttons */
 .clean-button {

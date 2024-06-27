@@ -6,13 +6,17 @@ const paragraphStyle = {
     // Add more styles as needed
 };
 
+const linkStyle = {
+    color: 'blue',
+};
+
 
 
 
 const TermsContent = () => (
 
     <div style={{ marginTop: '1rem' }}>
-        <h2>Note: All these terms below are meaningless (except that you <em>agree</em> sporks are the best eating utensil since it combines a spoon and a fork into one entity.)</h2>
+        <h2>Note: All these terms below are meaningless (except that you <em>agree</em> <a className={'link'} href="https://en.wikipedia.org/wiki/Spork">sporks</a> are the best eating utensil since it combines a spoon and a fork into one entity)</h2>
         <p style={{ ...paragraphStyle, marginTop: '1rem' }}>
 
             The League of Extremely Important, Yet Utterly Nonsensical, Terms and Conditions (L.E.I.Y.U.N.T.&C.) - American Fast Food Edition

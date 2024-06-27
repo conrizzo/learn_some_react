@@ -3,7 +3,7 @@
 }
 
 .link{
-    color: #007bff;    
+    color: rgb(66, 133, 244);    
 }
 .link:hover{
     cursor: pointer;
@@ -39,7 +39,7 @@
 }
 
 .check-box input[type='checkbox'] {
-    accent-color: #42b983;
+    accent-color: rgb(66, 133, 244);
 }
 
 .button-margin{
