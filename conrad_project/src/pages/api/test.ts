@@ -26,7 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         console.log(turso);
         count++;
         console.log(count);
-        console.error("Failed to execute database query:", error);
+        console.error("Failed to execute database query:", error,  count);
         res.status(500).json({ error: "Failed to execute database query" });
     }
 }
@@ -60,7 +60,7 @@ async function runUserTest(turso: any) {
     } catch (error) {
         count++;
         console.log(count);
-        console.error("Failed to execute database query:", error);
+        console.error("Failed to execute database query:", error,  count);
         throw error;
     }
 }
