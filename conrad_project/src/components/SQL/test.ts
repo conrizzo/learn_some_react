@@ -12,6 +12,11 @@ const turso = createClient({
 
 async function runUserTest() {
     try {
+          // Insert a new user into the database
+        await turso.execute({
+            sql: "INSERT INTO users (name, email) VALUES (?, ?)",
+            args: ["New User", "newuser@example.com"],
+        });
         // Execute a simple SELECT query to fetch all users
         await turso.execute("SELECT * FROM users");
 
