@@ -28,6 +28,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 // Modify 'runUserTest' to accept 'turso' as a parameter
 async function runUserTest(turso: any) {
     try {
+
+        await turso.execute({
+            sql: `CREATE TABLE IF NOT EXISTS users (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    name TEXT NOT NULL,
+                    email TEXT NOT NULL UNIQUE
+                  )`,
+        });
+
         await turso.execute({
             sql: "INSERT INTO users (name, email) VALUES (?, ?)",
             args: ["New User", "newuser@example.com"],
