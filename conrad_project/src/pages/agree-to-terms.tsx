@@ -10,9 +10,10 @@ type ModalType = {
     isOpen: boolean;
     index: number;
 };
+const theArray: string[] = [];
 
 const AgreeToTerms: React.FC = () => {
-    const theArray: string[] = [];
+    
     const synonyms = [
         "completely",
         "entirely",
