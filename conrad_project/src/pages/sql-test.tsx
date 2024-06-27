@@ -1,5 +1,5 @@
 
-/*
+
 import React, { useEffect } from 'react';
 
 
@@ -37,4 +37,3 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-*/
