@@ -1,22 +1,21 @@
 
+/*
 import React, { useEffect } from 'react';
-//import test from './api/test';
-// import  test  from './api/test';
+
 
 
 const IndexPage = () => {
     useEffect(() => {
         (async () => {
             try {
-                // Replace `/api/test` with the correct path to your API route
+              
                 const response = await fetch('/api/test', {
-                    method: 'GET', // or 'POST', depending on your API method
+                    method: 'GET', 
                     headers: {
                         'Content-Type': 'application/json',
-                        // Include other headers as needed
+              
                     },
-                    // Include body if method is POST
-                    // body: JSON.stringify({ key: 'value' }),
+          
                 });
 
                 if (!response.ok) {
@@ -29,7 +28,7 @@ const IndexPage = () => {
                 console.error("Error running user test:", error);
             }
         })();
-    }, []); // Empty dependency array means this runs once on mount
+    }, []); 
 
     return (
         <div>Testing SQL-Torso</div>
@@ -37,3 +36,5 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+*/
