@@ -16,6 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const result = await runUserTest(turso); // Assuming runUserTest is refactored to be usable here
         res.status(200).json(result);
     } catch (error) {
+        console.log(turso);
         console.error("Failed to execute database query:", error);
         res.status(500).json({ error: "Failed to execute database query" });
     }
