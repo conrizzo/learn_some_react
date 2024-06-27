@@ -9,16 +9,14 @@ let count = 0;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
-
     const turso = createClient({
         url: process.env.TURSO_DATABASE_URL || '',
-        authToken: process.env.TURSO_SQL,
+        authToken: process.env.TURSO_AUTH_TOKEN,
     });
 
     console.log(turso);
     console.log(process.env.TURSO_DATABASE_URL);
-    console.log(process.env.TURSO_SQL);
+    console.log(process.env.TURSO_AUTH_TOKEN);
 
     try {
         // Your database operation logic here
