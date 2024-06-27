@@ -5,13 +5,20 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from "@libsql/client";
 
+let count = 0;
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+
     const turso = createClient({
         url: process.env.TURSO_DATABASE_URL || '',
         authToken: process.env.TURSO_SQL,
     });
 
     console.log(turso);
+    console.log(process.env.TURSO_DATABASE_URL);
+    console.log(process.env.TURSO_SQL);
 
     try {
         // Your database operation logic here
@@ -51,6 +58,8 @@ async function runUserTest(turso: any) {
 
         return answer;
     } catch (error) {
+        count++;
+        console.log(count);
         console.error("Failed to execute database query:", error);
         throw error;
     }
