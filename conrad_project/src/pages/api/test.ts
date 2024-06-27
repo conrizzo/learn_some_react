@@ -2,6 +2,8 @@
 
 //const API_KEY = process.env.TURSO_SQL; // Set a default value for apiKey if it is undefined
 //const TURSO_URL = process.env.TURSO_DATABASE_URL;
+
+/*
 import { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from "@libsql/client";
 
@@ -19,8 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log(process.env.TURSO_AUTH_TOKEN);
 
     try {
-        // Your database operation logic here
-        const result = await runUserTest(turso); // Assuming runUserTest is refactored to be usable here
+     
+        const result = await runUserTest(turso); 
         res.status(200).json(result);
     } catch (error) {
         console.log(turso);
@@ -32,7 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 
-// Modify 'runUserTest' to accept 'turso' as a parameter
+
 async function runUserTest(turso: any) {
     try {
 
@@ -65,7 +67,7 @@ async function runUserTest(turso: any) {
     }
 }
 
+*/
 
-// Use an async IIFE to call runUserTest and log the result
 
 
