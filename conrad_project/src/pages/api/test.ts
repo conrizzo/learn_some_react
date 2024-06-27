@@ -11,6 +11,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         authToken: process.env.TURSO_SQL,
     });
 
+    console.log(turso);
+
     try {
         // Your database operation logic here
         const result = await runUserTest(turso); // Assuming runUserTest is refactored to be usable here
