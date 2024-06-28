@@ -33,7 +33,7 @@ export default function Page({
             <h1>This page is to learn how to use SQL with React</h1>
             <ul>
                 {rows.map((row: any) => (
-                    <li key={row.id}>{row.id} - {row.name}</li>
+                    <li key={row.id}>{row.id} - {row.data}</li>
                 ))}
             </ul>
         </div>
