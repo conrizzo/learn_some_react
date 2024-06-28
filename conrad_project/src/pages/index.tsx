@@ -94,6 +94,17 @@ export default function Home() {
           <p></p>
         </Link>
 
+        <Link href="/sql"
+          className={styles.card}
+        >
+          <h2>
+            <span>
+             Page to test out SQL/backend data in React
+            </span>
+          </h2>
+          <p></p>
+        </Link>
+
 
 
 

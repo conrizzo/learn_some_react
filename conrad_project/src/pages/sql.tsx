@@ -1,6 +1,7 @@
 import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
 
 import { turso } from "../utils/turso";
+import styles from "/sql.module.css"
 
 
 
@@ -31,11 +32,17 @@ export default function Page({
     return (
         <div>
             <h1>This page is to learn how to use SQL with React</h1>
+            <p>June, 28 2024 - This page connects to a <a className='link' href="https://turso.tech/">Turso</a> database.
+                Am curious about using SQL with react and decided to test this backend database service and learn
+                how to/best practices to connect to backend data with React.
+            </p>
+            <div className={styles.centering}>
             <ul>
                 {rows.map((row: any) => (
                     <li key={row.id}>{row.id} - {row.data}</li>
                 ))}
             </ul>
+            </div>
         </div>
     );
 }
