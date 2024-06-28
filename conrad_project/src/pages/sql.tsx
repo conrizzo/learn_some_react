@@ -16,7 +16,7 @@ export const getServerSideProps = (async () => {
     `);
     */
 
-    const { rows } = await turso.execute("SELECT * FROM data");
+    const { rows } = await turso.execute("SELECT * FROM users");
 
     return {
         props: {
