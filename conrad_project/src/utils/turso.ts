@@ -1,4 +1,6 @@
-import 'dotenv/config';
+// it's possible that this might interfere with vercel env variables so editing it off
+// import 'dotenv/config';
+
 import { createClient } from "@libsql/client";
 
 export const turso = createClient({
