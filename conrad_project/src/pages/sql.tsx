@@ -7,14 +7,16 @@ import { turso } from "../utils/turso";
 export const getServerSideProps = (async () => {
 
     // bad practice to create table here - but just to test things and learn
+    /*
     await turso.execute(`
-        CREATE TABLE IF NOT EXISTS table_name (
+        CREATE TABLE IF NOT EXISTS users (
             id SERIAL PRIMARY KEY,
             data TEXT NOT NULL
         )
     `);
+    */
 
-    const { rows } = await turso.execute("SELECT * FROM table_name");
+    const { rows } = await turso.execute("SELECT * FROM data");
 
     return {
         props: {
@@ -28,10 +30,10 @@ export default function Page({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
     return (
         <div>
-            <p>Test on other page: </p>
+            <h1>This page is to learn how to use SQL with React</h1>
             <ul>
                 {rows.map((row: any) => (
-                    <li key={row.id}>{row.id}</li>
+                    <li key={row.id}>{row.id} - {row.name}</li>
                 ))}
             </ul>
         </div>
