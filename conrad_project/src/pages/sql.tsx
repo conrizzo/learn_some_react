@@ -1,7 +1,7 @@
 import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
 
 import { turso } from "../utils/turso";
-import styles from "/sql.module.css"
+import styles from "./sql.module.css"
 
 
 
@@ -37,11 +37,11 @@ export default function Page({
                 how to/best practices to connect to backend data with React.
             </p>
             <div className={styles.centering}>
-            <ul>
-                {rows.map((row: any) => (
-                    <li key={row.id}>{row.id} - {row.data}</li>
-                ))}
-            </ul>
+                <ul>
+                    {rows.map((row: any) => (
+                        <li key={row.id}>{row.id} - {row.data}</li>
+                    ))}
+                </ul>
             </div>
         </div>
     );
