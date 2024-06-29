@@ -101,7 +101,7 @@ export default function Page({
             <div className={styles['set-width']}>
                 <h1>This page is to learn how to use SQL tools with React / Next.js</h1>
                 <p>June, 28 2024 - This page connects to a <a className='link' href="https://turso.tech/">Turso</a> database. I have my own PostgreSQL database hosted in Docker on my VPS, but the point of this is
-                    to learn how to use more React since I'm already comfortable using Vue.js.
+                    to learn how to use more React since {"I'm already comfortable using Vue.js."}
                     Am in particular, curious about using SQL with React and decided to test this backend database service and learn
                     how to/best practices to connect to backend data with React / Next.js. {"I've already learned the basics of how to use backend commands on Vue.js with my self made Flask backend querying PostgreSQL."} A <a className='link' href="https://github.com/conrizzo/conradswebsite/blob/master/src/views/projects/UserAccount/user.ts">user interface</a> with <a className='link' href="https://github.com/conrizzo/conradswebsite/blob/master/src/axios.js">axios to makes posts and get secure http cookies and refresh cookies</a>, and a fairly
                     modular organized self-written <a className='link' href="https://github.com/conrizzo/python_back_end">Flask backend</a>.
