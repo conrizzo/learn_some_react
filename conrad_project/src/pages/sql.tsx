@@ -20,9 +20,11 @@ const CounterComponent = () => {
     }, []);
 
     return (
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div>
             <IncreaseCounterButton setCounterValue={setCounterValue} />
-            <p style={{ marginLeft: '10px' }}>Counter value: {counterValue?.toString() ?? 'N/A'}</p>
+             <p>Counter value: {counterValue?.toString() ?? 'N/A'}</p>
+            
+           
 
         </div>
     );

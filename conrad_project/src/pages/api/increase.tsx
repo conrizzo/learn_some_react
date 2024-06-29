@@ -29,7 +29,7 @@ export const IncreaseCounterButton: React.FC<IncreaseCounterButtonProps> = ({ se
     return (
         <div>
             <button className='clean-button' onClick={handleButtonClick}>Increase Counter</button>
-            <div style={{ marginLeft: '10px' }}>Response time: {executionTime ?? 'N/A'}</div>
+            <div>Response time: {executionTime ?? 'N/A'}</div>
         </div>
     );
 };
