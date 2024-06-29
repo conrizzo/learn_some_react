@@ -13,7 +13,7 @@ const CounterComponent = () => {
             const response = await fetch('/api/increase'); // Adjust API endpoint as necessary
             const data = await response.json();
             setCounterValue(data.counter);
-            setExecutionTime(data.executionTime); 
+            setExecutionTime(data.executionTime);
         };
 
         fetchCounterValue();
@@ -23,7 +23,7 @@ const CounterComponent = () => {
         <div style={{ display: 'flex', alignItems: 'center' }}>
             <IncreaseCounterButton setCounterValue={setCounterValue} />
             <p style={{ marginLeft: '10px' }}>Counter value: {counterValue?.toString() ?? 'N/A'}</p>
-        
+
         </div>
     );
 };
@@ -142,10 +142,15 @@ export default function Page({
                 </table>
                 <br />
                 {/* <p>Value on page load: {counterValue?.toString() ?? 'N/A'}</p> */}
-                
+
                 <h2>Counter</h2>
                 <p>Queries SQLite database in realtime and simply increases the number.</p>
-                <p>Keep in mind the time in ms will increase the further you are from Amsterdam!</p>
+                <p>Keep in mind the time in ms will increase the further you are from Amsterdam - sort of.
+                    The webserver for this is using a global service network, so it should serve this website over
+                    the closest server to you. Then that server has to query the database in Amsterdam. So, {"it's"} however far
+                    this is!
+
+                </p>
                 <CounterComponent />
 
             </div>
