@@ -16,3 +16,7 @@
 .set-width{
     max-width: 80rem;
 }
+
+.paragraphs p{
+    padding-bottom: 1rem;
+}
