@@ -57,20 +57,6 @@ export default function Page({
     counterValue,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
 
-    const [c1, setCounterValue] = useState<number | null>(null);
-
-    useEffect(() => {
-        // Fetch the initial counter value when the component mounts
-        const fetchCounterValue = async () => {
-            const response = await fetch('/api/getCounterValue'); // Adjust API endpoint as necessary
-            const data = await response.json();
-            setCounterValue(data.counter);
-        };
-
-        fetchCounterValue();
-    }, []);
-
-
     return (
         <div className={`${styles.centering} ${styles.paragraphs}`}>
 
