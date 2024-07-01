@@ -2,35 +2,9 @@ import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
 import { useState, useEffect } from "react";
 import { turso } from "../utils/turso";
 import styles from "./sql.module.css"
-import { IncreaseCounterButton } from "./api/increase"
+//import { IncreaseCounterButton } from "./api/increase"
+import { CounterComponent } from "./api/increase"
 
-const CounterComponent = () => {
-    const [counterValue, setCounterValue] = useState<number | null>(null);
-    const [executionTime, setExecutionTime] = useState<string | null>(null);
-    useEffect(() => {
-        // Fetch the initial counter value when the component mounts
-        const fetchCounterValue = async () => {
-            const response = await fetch('/api/increase'); // Adjust API endpoint as necessary
-            const data = await response.json();
-            setCounterValue(data.counter);
-            setExecutionTime(data.executionTime);
-        };
-
-        fetchCounterValue();
-    }, []);
-
-    return (
-        <div>
-            <IncreaseCounterButton setCounterValue={setCounterValue} />
-             <p>Counter value: {counterValue?.toString() ?? 'N/A'}</p>
-            
-           
-
-        </div>
-    );
-};
-
-export { CounterComponent };
 
 
 
