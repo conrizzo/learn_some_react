@@ -102,7 +102,7 @@ export default function Page({
                         ))}
                     </tbody>
                 </table>
-                <br />
+                <br/>
                 {/* <p>Value on page load: {counterValue?.toString() ?? 'N/A'}</p> */}
 
                 <h2>Counter</h2>
