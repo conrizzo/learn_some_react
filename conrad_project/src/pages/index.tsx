@@ -82,24 +82,24 @@ export default function Home() {
           <p>Agree to terms</p>
         </Link>
 
-        
+
         <Link href="/are-you-bored"
           className={styles.card}
         >
           <h2>
             <span>
-             Bored
+              Bored
             </span>
           </h2>
           <p></p>
         </Link>
 
-        <Link href="/sql"
+        <Link href="/sql" target="_blank" rel="noopener noreferrer"
           className={styles.card}
         >
           <h2>
             <span>
-             Page to test out SQL/backend data in React
+              Page to test out SQL/backend data in React
             </span>
           </h2>
           <p></p>
