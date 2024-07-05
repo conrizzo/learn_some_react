@@ -70,7 +70,7 @@ export default function Page({
                 </p>
                 <Suspense fallback={<div>Loading...</div>}>
                     <h2>SQLite - Table 1</h2>
-                    <table>
+                    <table style={{ paddingLeft: '1rem' }}>
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -87,7 +87,7 @@ export default function Page({
                         </tbody>
                     </table>
                     <h2>SQLite - Table 2</h2>
-                    <table>
+                    <table style={{ paddingLeft: '1rem' }}>
                         <thead>
                             <tr>
                                 <th>ID</th>
