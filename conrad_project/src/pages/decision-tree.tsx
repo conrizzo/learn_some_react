@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Modal from '../components/Modals/ConfirmationModal';
-import styles from './are-you-bored.module.css';
-import theImage from '/images/bored/lord_of_rings.jpg';
-// <img src={'/images/bored/lord_of_rings.jpg'} alt="Lord of the Rings" />
+import styles from './decision-tree.module.css';
+import theImage from '/images/bored/coffee.jpg';
+<img src={'/images/bored/coffee.jpg'} alt="coffee" />
 
 type ModalType = {
     isOpen: boolean;
@@ -19,7 +19,7 @@ const AgreeToTerms: React.FC = () => {
             {
                 answer: "Yes",
                 next:
-                    "Lord of the Rings"
+                    "The most exciting thing you can do is drink coffee and read documentation. "
                 ,
                 image: "",
             },
@@ -28,8 +28,8 @@ const AgreeToTerms: React.FC = () => {
                 next: {
                     question: "Are you doing something important?",
                     choices: [
-                        { answer: "Yes", next: "No you aren't ..." },
-                        { answer: "No", next: "Lord of the Rings" }
+                        { answer: "Yes", next: "You lied. Time to drink coffee and read documentation." },
+                        { answer: "No", next: "Drink coffee and read documentation." }
                     ]
                 }
             }
@@ -43,7 +43,7 @@ const AgreeToTerms: React.FC = () => {
     const handleChoice = (choice: any) => {
         if (typeof choice.next === 'string') {
             // Assuming reaching a string means the end of the decision tree
-            if (choice.next.includes("No you") || choice.next.includes("Lord of the Rings")) {
+            if (choice.next.includes("You lied") || choice.next.includes("Drink coffee") || choice.next.includes("The most")){
                 setTimeout(() => {
                     setShowDelayedPart(true);
                 }, 1000); // Delay the second part for 1 second
@@ -108,8 +108,8 @@ const AgreeToTerms: React.FC = () => {
                             </div>
 
                             <p>{modal.text || ''}</p>
-                            {/* showDelayedPart && <p>Lord of the Rings</p> */}
-                            {showDelayedPart && <img src={'/images/bored/lord_of_rings.jpg'} alt="Lord of the Rings" />}
+                            {/* showDelayedPart && <p>Coffee</p> */}
+                            {showDelayedPart && <img src={'/images/bored/coffee.jpg'} alt="coffee" />}
 
                         </div>
                         <div>

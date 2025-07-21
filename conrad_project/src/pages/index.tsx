@@ -83,7 +83,7 @@ export default function Home() {
         </Link>
 
 
-        <Link href="/are-you-bored"
+        <Link href="/decision-tree"
           className={styles.card}
         >
           <h2>
